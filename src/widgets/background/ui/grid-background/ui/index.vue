@@ -25,7 +25,7 @@ const swingDuration = 2;
           .fromTo(
             el,
             {
-              width: '100%',
+              opacity: 1,
               rotate: 170,
             },
             {
@@ -82,11 +82,11 @@ const swingDuration = 2;
         const anim = gsap.fromTo(
           el,
           {
-            width: '100%',
+            opacity: 1,
           },
           {
             duration: 1,
-            width: '0%',
+            opacity: 0,
             onComplete: done,
           },
         );
@@ -97,6 +97,6 @@ const swingDuration = 2;
       }
     "
   >
-    <img ref="grid" src="~shared/assets/grid.png" width="100%" height="100%" />
+    <img src="~shared/assets/grid.png" width="100%" height="100%" />
   </Animated>
 </template>

@@ -1,25 +1,48 @@
 <script lang="ts" setup>
-import gsap from 'gsap';
-import { onMounted, ref } from 'vue';
+import gsap, { Sine } from 'gsap';
+import { Animated } from 'shared/ui/animated';
+import { ref } from 'vue';
 
-const el = ref<any>(null);
-
-onMounted(() => {
-  gsap.fromTo(
-    el.value,
-    {
-      y: '30%',
-    },
-    {
-      duration: 1,
-      y: '-10%',
-      x: '25%',
-      width: '30%',
-    },
-  );
-});
+const anim = ref<gsap.core.Tween | null>(null);
 </script>
 
 <template>
-  <img ref="el" src="~shared/assets/me.png" width="40%" height="auto" />
+  <Animated
+    class="w-[40%] h-auto"
+    :on-enter="
+      (el) => {
+        if (anim === null) {
+          anim = gsap.fromTo(
+            el,
+            {
+              y: '40%',
+            },
+            {
+              duration: 2,
+              y: '0%',
+              top: '23%',
+              left: '26%',
+              width: '20%',
+              ease: Sine.easeInOut,
+            },
+          );
+        } else {
+          anim.play();
+        }
+
+        return null;
+      }
+    "
+    :on-exit="
+      (el) => {
+        anim?.reverse();
+
+        return null;
+      }
+    "
+  >
+    <div class="relative">
+      <img src="~shared/assets/mefull.png" />
+    </div>
+  </Animated>
 </template>

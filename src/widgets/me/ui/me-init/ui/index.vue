@@ -1,23 +1,36 @@
 <script lang="ts" setup>
 import gsap from 'gsap';
-import { onMounted, ref } from 'vue';
-
-const el = ref<any>(null);
-
-onMounted(() => {
-  gsap.fromTo(
-    el.value,
-    {
-      y: '100%',
-    },
-    {
-      duration: 1,
-      y: '30%',
-    },
-  );
-});
+import { Animated } from 'shared/ui/animated';
 </script>
 
 <template>
-  <img ref="el" src="~shared/assets/me.png" width="40%" height="auto" />
+  <Animated
+    class="w-[40%] h-auto"
+    :on-enter="
+      (el) => {
+        const anim = gsap.fromTo(
+          el,
+          {
+            y: '100%',
+          },
+          {
+            duration: 1,
+            y: '40%',
+          },
+        );
+        return () => {
+          anim.kill();
+        };
+      }
+    "
+    :on-exit="
+      (el) => {
+        gsap.set(el, { opacity: 0 });
+
+        return null;
+      }
+    "
+  >
+    <img src="~shared/assets/mefull.png" />
+  </Animated>
 </template>

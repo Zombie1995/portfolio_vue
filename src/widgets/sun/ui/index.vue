@@ -1,32 +1,16 @@
 <script lang="ts" setup>
 import gsap from 'gsap';
 import { Animated } from 'shared/ui/animated';
-
-const props = withDefaults(
-  defineProps<{
-    animatedShow?: boolean;
-  }>(),
-  { animatedShow: true },
-);
 </script>
 
 <template>
   <Animated
-    :animated-show="props.animatedShow"
     :on-enter="
       (el) => {
         const anim1 = gsap.fromTo(
           el,
-          {
-            scale: 1,
-            top: '-10%',
-            left: '-10%',
-          },
-          {
-            duration: 2.5,
-            top: '3%',
-            left: '3%',
-          },
+          { scale: 0, opacity: 1 },
+          { delay: 1, duration: 2, scale: 1 },
         );
         const anim2 = gsap.fromTo(
           el,
@@ -49,15 +33,24 @@ const props = withDefaults(
     "
     :on-exit="
       (el, done) => {
-        const anim = gsap.fromTo(el, { scale: 1 }, { duration: 1, scale: 0, onComplete: done });
+        const anim = gsap.fromTo(
+          el,
+          {
+            opacity: 1,
+          },
+          {
+            duration: 1,
+            opacity: 0,
+            onComplete: done,
+          },
+        );
 
         return () => {
           anim.kill();
         };
       }
     "
-    class="absolute w-[10%] aspect-square"
   >
-    <img src="~shared/assets/dodecahedron.png" />
+    <img class="scale-[4] aspect-square" src="~shared/assets/sun.png" />
   </Animated>
 </template>
