@@ -85,6 +85,7 @@ const swingDuration = 2;
             opacity: 1,
           },
           {
+            delay: 1,
             duration: 1,
             opacity: 0,
             onComplete: done,

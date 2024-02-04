@@ -49,7 +49,11 @@ const props = withDefaults(
     "
     :on-exit="
       (el, done) => {
-        const anim = gsap.fromTo(el, { scale: 1 }, { duration: 1, scale: 0, onComplete: done });
+        const anim = gsap.fromTo(
+          el,
+          { scale: 1 },
+          { delay: 1, duration: 1, scale: 0, onComplete: done },
+        );
 
         return () => {
           anim.kill();
