@@ -7,7 +7,8 @@ import { Animated } from 'shared/ui/animated';
   <Animated
     :on-enter="
       (el) => {
-        const anim1 = gsap.fromTo(el, { width: 0, opacity: 1 }, { duration: 2, width: '40%' });
+        gsap.set(el, { opacity: 1 });
+        const anim1 = gsap.fromTo(el, { width: 0 }, { duration: 2, width: '40%' });
         const anim2 = gsap.fromTo(
           el,
           { top: '-10%' },
@@ -28,22 +29,10 @@ import { Animated } from 'shared/ui/animated';
     "
     :on-exit="
       (el, done) => {
-        const anim1 = gsap.fromTo(el, { width: '40%' }, { duration: 0.5, width: 0 });
-        const anim2 = gsap.fromTo(
-          el,
-          { top: '10%' },
-          { duration: 0.5, top: '-10%', ease: Circ.easeIn },
-        );
-        const anim3 = gsap.fromTo(
-          el,
-          { left: '10%' },
-          { duration: 0.5, left: '8%', ease: Circ.easeIn },
-        );
+        const anim = gsap.to(el, { opacity: 0, onComplete: done });
 
         return () => {
-          anim1.kill();
-          anim2.kill();
-          anim3.kill();
+          // anim.kill();
         };
       }
     "
