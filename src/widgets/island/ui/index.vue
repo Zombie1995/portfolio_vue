@@ -32,7 +32,7 @@ import { Animated } from 'shared/ui/animated';
         const anim = gsap.to(el, { opacity: 0, onComplete: done });
 
         return () => {
-          // anim.kill();
+          anim.kill();
         };
       }
     "

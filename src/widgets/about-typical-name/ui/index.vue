@@ -46,7 +46,7 @@ const stopCaretFlashing = () => {
         startCaretFlashing,
         1500,
         stopCaretFlashing,
-        'Кербер Егор\n      Frontend-\n          разработчик',
+        'Кербер Егор\n      Frontend-разработчик',
         props.onDeveloperTypeEnd,
         startCaretFlashing,
       ]"
