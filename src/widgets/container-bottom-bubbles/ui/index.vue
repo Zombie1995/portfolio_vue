@@ -18,7 +18,7 @@ const { height: windowHeight } = useWindowSize();
     :style="{
       transform: `translate(0px,${getMostBubblePosition(y, windowHeight, props.parentHeight)})`,
     }"
-    class="absolute bottom-0 w-full object-cover"
+    class="z-[-20] absolute bottom-0 w-full object-cover"
     src="~shared/assets/bubbles_1.png"
   />
   <img
