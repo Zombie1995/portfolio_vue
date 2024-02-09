@@ -10,7 +10,7 @@ import { SeriousDeveloper } from 'widgets/serious-developer';
 import { Social } from 'widgets/social';
 import { Sun } from 'widgets/sun';
 
-const firstStageHeight = '250vh';
+const firstStageHeight = '200vh';
 
 const showGrid = ref(false);
 const showDodecahedron = ref(false);
@@ -29,6 +29,7 @@ const activeViewNum = computed(() => {
 </script>
 
 <template>
+  <!-- First stage -->
   <div :style="{ height: firstStageHeight }" class="relative">
     <div class="fixed top-0 left-0 h-screen w-full overflow-hidden">
       <!-- First part -->
@@ -70,5 +71,6 @@ const activeViewNum = computed(() => {
     </div>
     <ContainerBottomBubbles :parent-height="firstStageHeight" />
   </div>
-  <div class="sticky top-0 h-[2000px] w-full bg-white" />
+  <!-- Second stage -->
+  <div class="sticky top-0 h-full w-full bg-white"></div>
 </template>
