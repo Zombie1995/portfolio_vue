@@ -74,6 +74,11 @@ const activeViewNum = computed(() => {
   </div>
   <!-- Second stage -->
   <div class="sticky top-0 min-h-[200vh] w-full bg-white">
-    <ProjectCard />
+    <ProjectCard
+      color="#E8F9FF"
+      img="~shared/assets/pic_smart_keyboard.png"
+      project-lang="flutter"
+      project-name="Умная клавиатура"
+    />
   </div>
 </template>

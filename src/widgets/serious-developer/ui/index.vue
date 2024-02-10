@@ -45,7 +45,7 @@ const props = withDefaults(
     "
   >
     <p
-      class="h-[250px] font-[Pacifico] lg:text-[70px] lg:leading-[70px] md:text-[70px] md:leading-[70px] text-[30px] leading-[38px] text-[#FFFFFF] italic break-all bg-clip-text text-transparent bg-gradient-to-br from-[#c1eb4c] via-[#ffe188] to-[#FF40AF] whitespace-pre-line"
+      class="h-[20vh] md:w-[45vw] w-[60vw] font-[Pacifico] md:text-[4vw] md:leading-[4vw] text-[8vw] leading-[8vw] text-[#FFFFFF] italic break-all bg-clip-text text-transparent bg-gradient-to-br from-[#c1eb4c] via-[#ffe188] to-[#FF40AF] whitespace-pre-line"
     >
       {{ 'Серьёзный\n      разработчик' }}
     </p>
