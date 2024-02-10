@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core';
+import { ProjectCard } from 'entities/project-card';
 import { computed, ref } from 'vue';
 import { AboutTypicalName } from 'widgets/about-typical-name';
 import { Dodecahedron, GridBackground } from 'widgets/background';
@@ -46,7 +47,7 @@ const activeViewNum = computed(() => {
       <MeFull :animated-show="activeViewNum === 1" class="z-[2] absolute bottom-0 left-[5%]" />
 
       <Social v-if="showSocial" />
-      <div class="absolute top-[30%] left-[45%]">
+      <div class="z-[10] absolute lg:top-[30%] lg:left-[45%] md:top-[50%] top-[40%] left-[20%]">
         <AboutTypicalName
           :on-name-type-start="
             () => {
@@ -64,7 +65,7 @@ const activeViewNum = computed(() => {
             }
           "
           :show-serious-developer="activeViewNum === 1"
-          :show-white-back="activeViewNum === 0"
+          :show-blur-back="activeViewNum === 0"
         />
         <SeriousDeveloper :animated-show="activeViewNum === 1" />
       </div>
@@ -72,5 +73,7 @@ const activeViewNum = computed(() => {
     <ContainerBottomBubbles :parent-height="firstStageHeight" />
   </div>
   <!-- Second stage -->
-  <div class="sticky top-0 h-full w-full bg-white"></div>
+  <div class="sticky top-0 min-h-[200vh] w-full bg-white">
+    <ProjectCard />
+  </div>
 </template>

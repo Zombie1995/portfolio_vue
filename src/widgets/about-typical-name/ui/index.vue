@@ -8,9 +8,9 @@ const props = withDefaults(
     onNameTypeStart?: any;
     onNameTypeEnd?: any;
     onDeveloperTypeEnd?: any;
-    showWhiteBack?: boolean;
+    showBlurBack?: boolean;
   }>(),
-  { showWhiteBack: true },
+  { showBlurBack: true },
 );
 
 const showCaret = ref(true);
@@ -35,7 +35,7 @@ const stopCaretFlashing = () => {
 <template>
   <!-- eslint-disable no-irregular-whitespace -->
   <div
-    :class="`${showWhiteBack ? 'bg-[rgba(255,255,255,0.7)] shadow-[0_0_25px_20px_rgba(255,255,255,0.7)] rounded-full' : ''} transition-all duration-[1000ms]`"
+    :class="`${props.showBlurBack ? 'bg-[rgba(255,255,255,0.7)] shadow-[0_0_25px_20px_rgba(255,255,255,0.7)] rounded-full' : ''} transition-all duration-[1000ms]`"
   >
     <VTypical
       :class="AboutTypicalNameModel.getStyleWithCaret(showCaret)"

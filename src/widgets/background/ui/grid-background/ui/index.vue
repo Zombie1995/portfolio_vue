@@ -15,7 +15,7 @@ const swingDuration = 2;
 
 <template>
   <Animated
-    class="absolute origin-[60%_0%] mx-auto"
+    class="absolute top-[25vh] lg:top-0 origin-[60%_0%]"
     :animated-show="props.animatedShow"
     :on-enter="
       (el) => {

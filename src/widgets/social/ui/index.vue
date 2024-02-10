@@ -17,13 +17,13 @@ onMounted(() => {
 
 <template>
   <div class="absolute bottom-[5%] right-[5%] justify-end flex space-x-[3%] w-full">
-    <a href="https://github.com/Zombie1995" class="w-[3%] aspect-square">
+    <a href="https://github.com/Zombie1995" class="lg:w-[3%] w-[8%] aspect-square">
       <img ref="github" src="~shared/assets/github.svg" />
     </a>
-    <a href="https://t.me/Zombie19956" class="w-[3%] aspect-square">
+    <a href="https://t.me/Zombie19956" class="lg:w-[3%] w-[8%] aspect-square">
       <img ref="telegram" src="~shared/assets/telegram.svg" />
     </a>
-    <a href="https://vk.com/kerber1995" class="w-[3%] aspect-square">
+    <a href="https://vk.com/kerber1995" class="lg:w-[3%] w-[8%] aspect-square">
       <img ref="vk" src="~shared/assets/vk.svg" />
     </a>
   </div>
