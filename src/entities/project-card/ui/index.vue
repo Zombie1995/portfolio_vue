@@ -16,14 +16,11 @@ const props = withDefaults(
     class="min-w-[20vw] w-min h-[8vw] rounded-br-[5vw] rounded-tr-[1vw] rounded-[4vw] shadow-md bg-clip-content flex"
   >
     <div class="h-full aspect-square">
-      <!-- <img class="h-full object-cover rounded-l-[1vw]" :src="props.img" /> -->
-      <img
-        class="h-full object-cover rounded-l-[1vw]"
-        src="~shared/assets/pic_smart_keyboard.png"
-      />
+      <img class="h-full object-cover rounded-l-[1vw]" :src="props.img" />
+      <img class="h-full object-cover rounded-l-[1vw]" src="shared/assets/pic_smart_keyboard.png" />
     </div>
-    <div class="p-[12px]">
-      <p class="text-[1vw]">{{ props.projectLang }}</p>
+    <div class="p-[0.8vw]">
+      <p class="text-[0.8vw] leading-[0.8vw]">{{ props.projectLang }}</p>
       <p class="whitespace-nowrap text-[1vw]">{{ props.projectName }}</p>
     </div>
   </div>

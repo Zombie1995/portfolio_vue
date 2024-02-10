@@ -48,7 +48,7 @@ const activeViewNum = computed(() => {
 
       <Social v-if="showSocial" />
       <div
-        class="z-[10] absolute lg:top-[30%] lg:left-[45%] md:top-[50%] top-[40%] left-[20%] lg:bg-[rgba(255,255,255,0.0)] lg:shadow-none md:rounded-none bg-[rgba(255,255,255,0.7)] shadow-[0_0_25px_20px_rgba(255,255,255,0.7)] rounded-full"
+        class="z-[10] absolute lg:top-[30%] lg:left-[47%] md:top-[50%] md:left-[50%] top-[40%] left-[20%] lg:bg-[rgba(255,255,255,0.0)] lg:shadow-none md:rounded-none bg-[rgba(255,255,255,0.7)] shadow-[0_0_25px_20px_rgba(255,255,255,0.7)] rounded-full"
       >
         <AboutTypicalName
           :on-name-type-start="
@@ -78,7 +78,7 @@ const activeViewNum = computed(() => {
   <div class="sticky top-0 min-h-[200vh] w-full bg-white">
     <ProjectCard
       color="#E8F9FF"
-      img="~shared/assets/pic_smart_keyboard.png"
+      img="shared/assets/pic_smart_keyboard.png"
       project-lang="flutter"
       project-name="Умная клавиатура"
     />
