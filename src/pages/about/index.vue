@@ -47,7 +47,9 @@ const activeViewNum = computed(() => {
       <MeFull :animated-show="activeViewNum === 1" class="z-[2] absolute bottom-0 left-[5%]" />
 
       <Social v-if="showSocial" />
-      <div class="z-[10] absolute lg:top-[30%] lg:left-[45%] md:top-[50%] top-[40%] left-[20%]">
+      <div
+        class="z-[10] absolute lg:top-[30%] lg:left-[45%] md:top-[50%] top-[40%] left-[20%] lg:bg-[rgba(255,255,255,0.0)] lg:shadow-none md:rounded-none bg-[rgba(255,255,255,0.7)] shadow-[0_0_25px_20px_rgba(255,255,255,0.7)] rounded-full"
+      >
         <AboutTypicalName
           :on-name-type-start="
             () => {

@@ -23,8 +23,8 @@ const props = withDefaults(
       />
     </div>
     <div class="p-[12px]">
-      <p>{{ props.projectLang }}</p>
-      <p class="whitespace-nowrap">{{ props.projectName }}</p>
+      <p class="text-[1vw]">{{ props.projectLang }}</p>
+      <p class="whitespace-nowrap text-[1vw]">{{ props.projectName }}</p>
     </div>
   </div>
 </template>
