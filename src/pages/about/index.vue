@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core';
-import { ProjectCard } from 'entities/project-card';
+import { ProjectCardList } from 'entities/project-list';
 import { computed, ref } from 'vue';
 import { AboutTypicalName } from 'widgets/about-typical-name';
 import { Dodecahedron, GridBackground } from 'widgets/background';
@@ -76,11 +76,6 @@ const activeViewNum = computed(() => {
   </div>
   <!-- Second stage -->
   <div class="sticky top-0 min-h-[200vh] w-full bg-white">
-    <ProjectCard
-      color="#E8F9FF"
-      img="shared/assets/pic_smart_keyboard.png"
-      project-lang="flutter"
-      project-name="Умная клавиатура"
-    />
+    <ProjectCardList />
   </div>
 </template>

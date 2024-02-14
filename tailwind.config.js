@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         Roboto: ['Roboto Condensed', 'sans-serif'],
         Pacifico: ['Pacifico', 'cursive'],
+        Russo: ['Russo One', 'sans-serif'],
       },
     },
   },
