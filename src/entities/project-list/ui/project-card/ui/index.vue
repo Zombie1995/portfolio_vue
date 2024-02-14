@@ -9,13 +9,14 @@ const props = withDefaults(
     img?: string;
     projectLang?: string;
     projectName?: string;
+    href?: string;
   }>(),
   { img: '' },
 );
 </script>
 
 <template>
-  <a href="https://github.com/Zombie1995">
+  <a :href="props.href">
     <Animated
       :on-enter="
         (el) => {

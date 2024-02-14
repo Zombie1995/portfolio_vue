@@ -12,6 +12,7 @@ const projects: Array<ProjectCardModel.ProjectCard> = [
     img: '/src/shared/assets/pic_smart_keyboard.png',
     projectLang: 'flutter',
     projectName: 'Умная клавиатура',
+    href: 'https://github.com/SmartKeyboardTeam',
   },
   {
     cardColor: '#EDEAFB',
@@ -19,6 +20,7 @@ const projects: Array<ProjectCardModel.ProjectCard> = [
     img: '/src/shared/assets/pic_vk_meetings.png',
     projectLang: 'react',
     projectName: 'ВК Встречи',
+    href: 'https://vk.com/app51759784_539305611?ref=snippet_im',
   },
 ];
 </script>
@@ -44,6 +46,7 @@ const projects: Array<ProjectCardModel.ProjectCard> = [
         :img="item.img"
         :project-lang="item.projectLang"
         :project-name="item.projectName"
+        :href="item.href"
       />
     </Animated>
   </MountInView>

@@ -4,4 +4,5 @@ export type ProjectCard = {
   img: string;
   projectLang: string;
   projectName: string;
+  href: string;
 };
