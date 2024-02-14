@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core';
-import { ProjectCardList } from 'entities/project-list';
+import { ProjectCardList, ProjectVideoList } from 'entities/project-list';
 import { computed, ref } from 'vue';
 import { AboutTypicalName } from 'widgets/about-typical-name';
 import { Dodecahedron, GridBackground } from 'widgets/background';
@@ -75,7 +75,13 @@ const activeViewNum = computed(() => {
     <ContainerBottomBubbles :parent-height="firstStageHeight" />
   </div>
   <!-- Second stage -->
-  <div class="sticky top-0 min-h-[200vh] w-full bg-white">
-    <ProjectCardList />
+  <div
+    class="sticky top-0 min-h-[200vh] w-full bg-white shadow-[0_-2px_25px_2px_rgba(232,249,255,0.7)]"
+  >
+    <p class="text-[4vw] font-light w-full pl-[3vw] pt-[6vw] mb-[3vw]">Портфолио</p>
+    <div class="flex justify-between">
+      <ProjectCardList />
+      <ProjectVideoList />
+    </div>
   </div>
 </template>

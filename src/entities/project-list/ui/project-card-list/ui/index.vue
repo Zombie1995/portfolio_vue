@@ -2,13 +2,31 @@
 import gsap from 'gsap';
 import { Animated } from 'shared/ui/animated';
 import { MountInView } from 'shared/ui/mount-in-view';
+import { ProjectCardModel } from '../../project-card';
 import { ProjectCard } from '../../project-card/ui';
+
+const projects: Array<ProjectCardModel.ProjectCard> = [
+  {
+    cardColor: '#E8F9FF',
+    projectLangColor: '#00BCFF',
+    img: '/src/shared/assets/pic_smart_keyboard.png',
+    projectLang: 'flutter',
+    projectName: 'Умная клавиатура',
+  },
+  {
+    cardColor: '#EDEAFB',
+    projectLangColor: '#D96EFF',
+    img: '/src/shared/assets/pic_vk_meetings.png',
+    projectLang: 'react',
+    projectName: 'ВК Встречи',
+  },
+];
 </script>
 
 <template>
   <MountInView>
     <Animated
-      class="grid gap-[3vw] pl-[10vw] pt-[8vw]"
+      class="grid gap-[3vw] pl-[10vw] pt-[4vw] w-min"
       :on-enter="
         () => {
           const anim = gsap.from(`.project-card-list`, { duration: 1, x: '-50vw', stagger: 0.1 });
@@ -19,13 +37,13 @@ import { ProjectCard } from '../../project-card/ui';
     >
       <ProjectCard
         class="project-card-list"
-        v-for="(item, index) in ['arr', 'arr', 'arr']"
+        v-for="(item, index) in projects"
         :key="index"
-        card-color="#E8F9FF"
-        project-lang-color="#00BCFF"
-        img="/src/shared/assets/pic_smart_keyboard.png"
-        project-lang="flutter"
-        project-name="Умная клавиатура"
+        :card-color="item.cardColor"
+        :project-lang-color="item.projectLangColor"
+        :img="item.img"
+        :project-lang="item.projectLang"
+        :project-name="item.projectName"
       />
     </Animated>
   </MountInView>
