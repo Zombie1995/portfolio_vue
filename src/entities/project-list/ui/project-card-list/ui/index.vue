@@ -28,7 +28,7 @@ const projects: Array<ProjectCardModel.ProjectCard> = [
 <template>
   <MountInView>
     <Animated
-      class="grid gap-[3vw] pl-[10vw] pt-[4vw] w-min"
+      class="grid gap-[6vw] lg:gap-[3vw] pl-[10vw] pt-[4vw] w-min"
       :on-enter="
         () => {
           const anim = gsap.from(`.project-card-list`, { duration: 1, x: '-50vw', stagger: 0.1 });

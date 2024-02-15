@@ -25,29 +25,32 @@ const props = withDefaults(
         }
       "
       :style="{ backgroundColor: props.cardColor }"
-      class="flex min-w-[20vw] w-min h-[8vw] rounded-br-[5vw] rounded-tr-[1vw] rounded-[4vw] transition-shadow hover:shadow-md"
+      class="flex min-w-[80vw] md:min-w-[20vw] w-min h-[30vw] md:h-[8vw] rounded-br-[20vw] rounded-tr-[3vw] rounded-[3vw] md:rounded-br-[5vw] md:rounded-tr-[1vw] md:rounded-[4vw] transition-shadow hover:shadow-md"
     >
       <div class="z-[2] h-full aspect-square">
-        <img class="h-full object-cover rounded-l-[1vw]" :src="props.img" />
+        <img class="h-full object-cover rounded-l-[3vw] md:rounded-l-[1vw]" :src="props.img" />
       </div>
-      <div class="p-[0.8vw] overflow-hidden flex">
+      <div class="p-[3vw] md:p-[0.8vw] overflow-hidden flex">
         <Animated
           :on-enter="
             (el) => {
               gsap.from(el, {
-                delay: 1,
+                delay: 0.7,
                 duration: 0.5,
-                x: -200,
+                x: -300,
               });
               return null;
             }
           "
           class="flex flex-col"
         >
-          <p :style="{ color: projectLangColor }" class="text-[0.8vw] leading-[0.8vw]">
+          <p
+            :style="{ color: projectLangColor }"
+            class="text-[4vw] leading-[1vw] md:text-[0.8vw] md:leading-[0.8vw]"
+          >
             {{ props.projectLang }}
           </p>
-          <p class="whitespace-nowrap text-[1vw] font-['Russo_One']">
+          <p class="whitespace-nowrap text-[5vw] md:text-[1vw] font-['Russo_One']">
             {{ props.projectName }}
           </p>
           <div class="grow" />

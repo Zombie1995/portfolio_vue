@@ -81,15 +81,17 @@ const activeViewNum = computed(() => {
   >
     <!-- First part -->
     <div class="min-h-[100vh]">
-      <p class="text-[4vw] font-light w-full pl-[3vw] pt-[12vh] mb-[6vh]">Портфолио</p>
-      <div class="flex justify-between">
+      <p class="text-[16vw] md:text-[4vw] font-light w-full pl-[3vw] pt-[12vh] mb-[6vh]">
+        Портфолио
+      </p>
+      <div class="lg:flex lg:justify-between">
         <ProjectCardList />
         <ProjectVideoList />
       </div>
     </div>
     <!-- Second part -->
     <div class="min-h-[100vh] flex flex-col">
-      <p class="text-[4vw] font-light w-full pl-[3vw] pt-[8vh]">Другое</p>
+      <p class="text-[16vw] md:text-[4vw] font-light w-full pl-[3vw] pt-[8vh]">Другое</p>
       <Sphere class="scale-50 md:scale-100" />
       <Social class="absolute bottom-[5%] justify-center" />
       <div class="grow" />

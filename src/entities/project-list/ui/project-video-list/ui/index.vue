@@ -8,7 +8,7 @@ import { MountInView } from 'shared/ui/mount-in-view';
 <template>
   <MountInView>
     <Animated
-      class="pt-[4vw] relative"
+      class="translate-y-[20vw] lg:translate-y-0 lg:pt-[4vw] relative"
       :on-enter="
         () => {
           const anim = gsap.from(`.project-video-demo`, { duration: 1, y: '100vw', stagger: 0.1 });

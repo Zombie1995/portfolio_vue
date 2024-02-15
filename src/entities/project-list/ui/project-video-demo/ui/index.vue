@@ -9,7 +9,7 @@ const props = withDefaults(
 
 <template>
   <div
-    class="h-[20vw] w-[40vw] p-[0.25vw] bg-gradient-to-b from-[#C9F1FF] via-[#C9F1FF] to-transparent rounded-[1vw]"
+    class="h-[35vw] w-[70vw] lg:h-[20vw] lg:w-[40vw] p-[0.25vw] bg-gradient-to-b from-[#C9F1FF] via-[#C9F1FF] to-transparent rounded-[1vw]"
   >
     <video
       ref="video"
