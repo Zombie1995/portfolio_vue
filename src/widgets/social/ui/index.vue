@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="absolute bottom-[5%] right-[5%] justify-end flex space-x-[3%] w-full">
+  <div class="flex space-x-[3%] w-full">
     <a href="https://github.com/Zombie1995" class="lg:w-[3%] w-[8%] aspect-square">
       <img ref="github" src="~shared/assets/github.svg" />
     </a>
