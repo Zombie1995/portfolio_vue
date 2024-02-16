@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core';
 import { ProjectCardList, ProjectVideoList } from 'entities/project-list';
+import { StagesReferencesModel } from 'entities/stages-references';
 import { computed, ref } from 'vue';
 import { AboutTypicalName } from 'widgets/about-typical-name';
 import { Dodecahedron, GridBackground } from 'widgets/background';
 import { ContainerBottomBubbles } from 'widgets/container-bottom-bubbles';
 import { Island } from 'widgets/island';
 import { MeFull, MeInit } from 'widgets/me';
+import { SecondStageStart } from 'widgets/second-stage-start';
 import { SeriousDeveloper } from 'widgets/serious-developer';
 import { Social } from 'widgets/social';
 import { Sphere } from 'widgets/sphere';
@@ -33,6 +35,7 @@ const activeViewNum = computed(() => {
 <template>
   <!-- First stage -->
   <div :style="{ height: firstStageHeight }" class="relative">
+    <div :ref="StagesReferencesModel.firstStage" />
     <div class="fixed top-0 left-0 h-screen w-full overflow-hidden">
       <!-- First part -->
       <Dodecahedron :animated-show="activeViewNum === 0 && showDodecahedron" />
@@ -79,6 +82,8 @@ const activeViewNum = computed(() => {
   <div
     class="sticky top-0 min-h-[200vh] w-full bg-white shadow-[0_-2px_25px_2px_rgba(232,249,255,0.7)]"
   >
+    <div :ref="StagesReferencesModel.secondStage" />
+    <SecondStageStart />
     <!-- First part -->
     <div class="min-h-[100vh]">
       <p class="text-[16vw] md:text-[4vw] font-light w-full pl-[3vw] pt-[12vh] mb-[6vh]">

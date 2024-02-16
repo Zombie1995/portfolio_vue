@@ -25,7 +25,7 @@ const props = withDefaults(
         }
       "
       :style="{ backgroundColor: props.cardColor }"
-      class="flex min-w-[80vw] md:min-w-[20vw] w-min h-[30vw] md:h-[8vw] rounded-br-[20vw] rounded-tr-[3vw] rounded-[3vw] md:rounded-br-[5vw] md:rounded-tr-[1vw] md:rounded-[4vw] transition-shadow hover:shadow-md"
+      class="flex min-w-[80vw] md:min-w-[20vw] w-min h-[30vw] md:h-[8vw] rounded-br-[20vw] rounded-tr-[3vw] rounded-[3vw] md:rounded-br-[5vw] md:rounded-tr-[1vw] md:rounded-[4vw] hover:shadow-md hover:translate-y-[-0.25vw]"
     >
       <div class="z-[2] h-full aspect-square">
         <img class="h-full object-cover rounded-l-[3vw] md:rounded-l-[1vw]" :src="props.img" />
