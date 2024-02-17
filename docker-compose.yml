@@ -3,7 +3,8 @@ services:
  vite_docker:
    image: node:alpine
    container_name: vite_docker
-   entrypoint: /bin/sh
+  #  Specify entrypoint to enter container and run commands by yourself later: docker exec -it vite_docker sh ; and then npm i && npm run dev
+  #  entrypoint: /bin/sh
    ports:
      - 8000:8000
    working_dir: /app
@@ -12,4 +13,4 @@ services:
        source: ./
        target: /app
    tty: true
-  #  command: npm run dev
+   command: /bin/sh -c "npm i && npm run dev"
