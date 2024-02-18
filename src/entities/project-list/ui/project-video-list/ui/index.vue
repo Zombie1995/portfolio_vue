@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { ProjectVideoDemo } from 'entities/project-list';
 import gsap from 'gsap';
+import demo1 from 'shared/assets/demo1.mp4';
+import demo2 from 'shared/assets/demo2.mp4';
 import { Animated } from 'shared/ui/animated';
 import { MountInView } from 'shared/ui/mount-in-view';
 </script>
@@ -17,13 +19,10 @@ import { MountInView } from 'shared/ui/mount-in-view';
         }
       "
     >
-      <ProjectVideoDemo
-        class="project-video-demo absolute top-0 right-[15vw]"
-        video="/src/shared/assets/demo2.mp4"
-      />
+      <ProjectVideoDemo class="project-video-demo absolute top-0 right-[15vw]" :video="demo1" />
       <ProjectVideoDemo
         class="project-video-demo absolute top-[10vw] right-[10vw]"
-        video="/src/shared/assets/demo1.mp4"
+        :video="demo2"
       />
     </Animated>
   </MountInView>

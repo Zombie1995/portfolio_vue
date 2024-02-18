@@ -15,6 +15,8 @@
 #    tty: true
 #    command: /bin/sh -c "npm i && npm run dev"
 
+
+# To run production: docker-compose up --build -d
 version: "3.4"
 services:
   vite_docker:

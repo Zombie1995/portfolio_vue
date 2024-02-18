@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import gsap from 'gsap';
+import pic_smart_keyboard from 'shared/assets/pic_smart_keyboard.png';
+import pic_vk_meetings from 'shared/assets/pic_vk_meetings.png';
 import { Animated } from 'shared/ui/animated';
 import { MountInView } from 'shared/ui/mount-in-view';
 import { ProjectCardModel } from '../../project-card';
@@ -9,7 +11,7 @@ const projects: Array<ProjectCardModel.ProjectCard> = [
   {
     cardColor: '#E8F9FF',
     projectLangColor: '#00BCFF',
-    img: '/src/shared/assets/pic_smart_keyboard.png',
+    img: pic_smart_keyboard,
     projectLang: 'flutter',
     projectName: 'Умная клавиатура',
     href: 'https://github.com/SmartKeyboardTeam',
@@ -17,7 +19,7 @@ const projects: Array<ProjectCardModel.ProjectCard> = [
   {
     cardColor: '#EDEAFB',
     projectLangColor: '#D96EFF',
-    img: '/src/shared/assets/pic_vk_meetings.png',
+    img: pic_vk_meetings,
     projectLang: 'react',
     projectName: 'ВК Встречи',
     href: 'https://vk.com/app51759784_539305611?ref=snippet_im',
