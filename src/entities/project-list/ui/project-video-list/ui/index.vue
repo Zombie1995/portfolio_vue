@@ -19,10 +19,10 @@ import { MountInView } from 'shared/ui/mount-in-view';
         }
       "
     >
-      <ProjectVideoDemo class="project-video-demo absolute top-0 right-[15vw]" :video="demo1" />
+      <ProjectVideoDemo class="project-video-demo absolute top-0 right-[15vw]" :video="demo2" />
       <ProjectVideoDemo
         class="project-video-demo absolute top-[10vw] right-[10vw]"
-        :video="demo2"
+        :video="demo1"
       />
     </Animated>
   </MountInView>
