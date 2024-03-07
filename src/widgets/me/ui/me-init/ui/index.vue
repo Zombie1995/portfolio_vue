@@ -5,7 +5,7 @@ import { Animated } from 'shared/ui/animated';
 
 <template>
   <Animated
-    class="w-[40%] h-auto"
+    class="md:w-[40%] w-[80%] h-auto"
     :on-enter="
       (el) => {
         const anim = gsap.fromTo(

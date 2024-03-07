@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { useWindowScroll } from '@vueuse/core';
 import { ProjectCardList, ProjectVideoList } from 'entities/project-list';
 import { StagesReferencesModel } from 'entities/stages-references';
 import { computed, ref } from 'vue';
@@ -20,7 +19,7 @@ const showGrid = ref(false);
 const showDodecahedron = ref(false);
 const showSocial = ref(false);
 
-const { y } = useWindowScroll();
+// const { y } = useWindowScroll();
 
 const activeViewNum = computed(() => {
   // const scroll = y.value;

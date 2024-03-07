@@ -40,7 +40,7 @@ const activeViewNum = computed(() => {
       <!-- First part -->
       <Dodecahedron :animated-show="activeViewNum === 0 && showDodecahedron" />
       <GridBackground :animated-show="activeViewNum === 0 && showGrid" />
-      <MeInit :animated-show="activeViewNum === 0" class="absolute bottom-0 left-[5%]" />
+      <MeInit :animated-show="activeViewNum === 0" class="z-[2] absolute bottom-0 left-[5%]" />
 
       <!-- Second part -->
       <Sun
@@ -50,7 +50,10 @@ const activeViewNum = computed(() => {
       <Island :animated-show="activeViewNum === 1" />
       <MeFull :animated-show="activeViewNum === 1" class="z-[2] absolute bottom-0 left-[5%]" />
 
-      <Social v-if="showSocial" class="absolute bottom-[5%] right-[5%] justify-end" />
+      <Social
+        v-if="showSocial"
+        class="absolute md:bottom-[5%] bottom-[30%] right-[5%] justify-end"
+      />
       <div
         class="z-[10] absolute lg:top-[30%] lg:left-[47%] md:top-[50%] md:left-[50%] top-[40%] left-[20%] lg:bg-[rgba(255,255,255,0.0)] lg:shadow-none md:rounded-none bg-[rgba(255,255,255,0.7)] shadow-[0_0_25px_20px_rgba(255,255,255,0.7)] rounded-full"
       >

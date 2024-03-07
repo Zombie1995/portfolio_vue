@@ -9,9 +9,9 @@ const vk = ref<any>(null);
 onMounted(() => {
   const tl = gsap.timeline();
 
-  tl.from(github.value, { duration: 1, translateY: '300%' })
-    .from(telegram.value, { duration: 1, translateY: '300%' }, '-=0.8')
-    .from(vk.value, { duration: 1, translateY: '300%' }, '-=0.8');
+  tl.from(github.value, { duration: 1, translateY: '900%' })
+    .from(telegram.value, { duration: 1, translateY: '900%' }, '-=0.8')
+    .from(vk.value, { duration: 1, translateY: '900%' }, '-=0.8');
 });
 </script>
 
