@@ -20,6 +20,7 @@
 version: "3.4"
 services:
   vite_docker:
+    restart: always
     build:
       context: .
       dockerfile: Dockerfile
